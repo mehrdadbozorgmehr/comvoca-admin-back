@@ -1,0 +1,74 @@
+@baseUrl = 127.0.0.1:3000
+@email=truemoein@gmail.com
+@password=Moein@123
+
+POST {{baseUrl}}/api/register
+Accept: application/json
+content-type: application/json
+
+{
+  "password": "Password@2",
+  "email": "majidbh+5@gmail.com"
+}
+
+###
+POST {{baseUrl}}/api/otp
+Accept: application/json
+content-type: application/json
+
+{
+  "email": "majidbh+2@gmail.com",
+  "otp": "486049"
+
+}
+###
+
+POST {{baseUrl}}/api/login
+Accept: application/json
+content-type: application/json
+
+{
+  "password": "Password@2",
+  "email": "majidbh+1@gmail.com"
+}
+
+###
+
+POST {{baseUrl}}/api/otp/resend
+Accept: application/json
+content-type: application/json
+
+{
+  "email": "majidbh+2@gmail.com"
+
+}
+###
+POST {{baseUrl}}/api/confirm-forgot-password
+Accept: application/json
+content-type: application/json
+
+{
+"email": "majidbh+1@gmail.com",
+"confirmation_code": "830204",
+"new_password": "Password@2"
+
+}
+
+
+###
+
+POST {{baseUrl}}/api/forgot-password
+Accept: application/json
+content-type: application/json
+
+{
+  "email": "majidbh+1@gmail.com"
+
+}
+
+###
+
+GET {{baseUrl}}/health
+
+###
+

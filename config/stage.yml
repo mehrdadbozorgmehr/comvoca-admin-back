@@ -1,0 +1,20 @@
+server:
+  port: 3000
+  memory_profile: true
+  cpu_profile: true
+  region: ca-central-1
+database:
+  host:  ${MYAPP_DB:localhost}
+  port: 5432
+  username: "postgres"
+  password: "postgres"
+  dbname: "comvoca"
+auth:
+  cognito:
+    user_pool_id: ca-central-1_3x2wMFDS0
+    client_id: 1ik578hh4sr839vslbje7ipb4h
+    secret: 1ccn6t2c29cl4rbolg2d4qabb7bd1f380lbbnvkkvlhcd7binul9
+    redirect_url: https://comvoca.com
+    issuer_url: https://cognito-idp.ca-central-1.amazonaws.com/ca-central-1_3x2wMFDS0
+    jwt_secret: uwYuAzCmY2WopusFLGZJxua49hdHgs4d_Q86KWe_XwspTlQFclmXXi444cSDDga3u1zcHDZS0XAl8Xh_ZnP4vDQwH3smBYovJykLBn59HM49tqmLolfGtjwqLJbmtsu6cPGJPhTBwr3Kq2BldcBmwtMjD9lsQ8nBdIzMVlcwaIay2Yq1-cAcCGX-KReKWugyqIr4qk3HvrI0U0eIMbAxC83CW01TbNPiP-s13dxCZSboTejucm-35hXdM7o09xq_WCpt-HNn_MyAtF9jxWx3SWBpEOMC1zcbk4Bg8-z2vr64dtTf85zxn0q-d8Bqx8s0XNtM2p1zL2dG6qeCy9KGUQ
+    token_expire_hour: 24
